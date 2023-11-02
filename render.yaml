@@ -3,4 +3,4 @@ services:
     name: AdsWebsite
     buildCommand: "./build.sh"
     env: python
-    startCommand: "python app.py"
+    startCommand: "python flask_app.py"
