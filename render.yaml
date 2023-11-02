@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: AdsWebsite
+    buildCommand: "./build.sh"
+    env: python
+    startCommand: "python app.py"
