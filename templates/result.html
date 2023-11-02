@@ -3,57 +3,27 @@
 <head>
     <title>Sentiment Analysis Result</title>
     <style>
-        /* Apply CSS styles to the body of the page */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-}
-
-/* Style the form in index.html */
-form {
-    margin: 20px;
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px #888888;
-}
-
-/* Style the result in result.html */
-#result {
-    margin: 20px;
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px #888888;
-}
-
-/* Apply specific styles to buttons */
-input[type="submit"] {
-    background-color: #007BFF;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-/* Style links */
-a {
-    color: #007BFF;
-    text-decoration: none;
-}
-
-/* Add hover effect to buttons and links */
-input[type="submit"]:hover,
-a:hover {
-    background-color: #0056b3;
-}
-
+        .comment-box {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+            background-color: #f0f0f0;
+        }
     </style>
 </head>
 <body>
     <h1>Sentiment Analysis Result</h1>
-    <p>Your comment has been analyzed, and the sentiment is:</p>
-    <p><strong>{{ sentiment }}</strong></p>
+    <h2>Comments:</h2>
+    <div class="comment-box">
+        {% for comment, sentiment in comment_sentiments %}
+            <div>
+                <p><strong>Comment:</strong></p>
+                <p>{{ comment }}</p>
+                <p><strong>Predicted Sentiment:</strong> {{ sentiment }}</p>
+            </div>
+        {% endfor %}
+    </div>
+
+    <a href="/">Go back</a>
 </body>
 </html>
