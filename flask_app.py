@@ -9,7 +9,7 @@ import numpy as np
 app = Flask(__name__)
 
 # Load your trained CNN model
-model = load_model("C:/Users/91934/Downloads/utubesentiment/sentimentc.h5")
+model = load_model("sentimentt.h5")
 
 # Load the CountVectorizer's vocabulary using pickle
 vectorizer = CountVectorizer(decode_error="replace")
