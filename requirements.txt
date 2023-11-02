@@ -1,6 +1,7 @@
 tensorflow
+Flask
+gunicorn
 numpy
 pandas
 scikit-learn
-streamlit
-pytube
+requests
